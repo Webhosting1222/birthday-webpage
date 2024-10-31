@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Hiba!</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Birthday, Hiba! 🎉</h1>
+        
+        <!-- Video Tag -->
+        <video id="birthday-video" width="600" controls style="display:none;" onended="showSoundText()">
+            <source src="birthday-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Text that will show before the video -->
+        <div id="birthday-message">
+            <p class="message">Mai bohat khush qismat hoon k mujhy ap jesi dost mili.</p>
+            <p class="message">Meri dua hai k aap hamesha khush rho or khoob kamyab ho!</p>
+            <p class="smile-text">You always look beautiful, especially when you wear a burqa! 😊</p>
+            <button onclick="playVideo()">Watch Birthday Video! 🎥</button> <!-- Button to start the video -->
+        </div>
+
+        <!-- Additional Text after the user clicks OK -->
+        <div id="sound-message" style="display:none;">
+            <p class="additional-text">Pta nahi apko yeh acha bhi lgy ya nhi!
+            <p class="additional-text"> agr kuch bura lgy advance sorry!</p>
+            <p class="additional-text"></p>(ok py click kay baad ik song woh sun lena)!</p>
+            <button onclick="playSound()">OK! 🎶</button> <!-- Button to play audio -->
+        </div>
+
+        <audio id="birthday-audio" src="birthday-song.mp3"></audio> <!-- Audio file -->
+    </div>
+
+    <script src="script.js"></script> <!-- Linking JavaScript file -->
+    <script>
+        function playVideo() {
+            var video = document.getElementById("birthday-video");
+            video.style.display = "block"; // Show video
+            video.play(); // Play video
+        }
+
+        function showSoundText() {
+            var video = document.getElementById("birthday-video");
+            video.style.display = "none"; // Hide video after it ends
+
+            // Hide birthday message
+            var message = document.getElementById("birthday-message");
+            message.style.display = "none"; // Hide birthday message
+
+            // Show sound message
+            var soundMessage = document.getElementById("sound-message");
+            soundMessage.style.display = "block"; // Show additional message
+        }
+
+        function playSound() {
+            var audio = document.getElementById("birthday-audio");
+            audio.play(); // Play audio
+        }
+    </script>
+</body>
+</html>

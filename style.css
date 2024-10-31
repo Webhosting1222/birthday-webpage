@@ -1,0 +1,6 @@
+body {
+    background-image: url('your-background-image.jpg'); /* Yahan apni image ka naam daalein */
+    background-size: cover; /* Image ko poore background me dikhane ke liye */
+    background-position: center 20%; /* Image ko center me rakhne ke liye aur thoda niche le jane ke liye */
+    color: black; /* Text ka color black */
+}
